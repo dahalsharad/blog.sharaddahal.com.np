@@ -1,0 +1,81 @@
+# Site settings
+site: Blogs
+title: Random Blogs
+keywords: blog, d_sharad
+description: >-
+  i blog for fun
+lang: en-US
+timezone:  Asia/Kathmandu
+google_verify: # Put your Google Verification here
+google_analytics:  # Put your Google Analytics code
+discus-identifier:  XXX
+
+# Author settings
+author:
+  name: Sharad Dahal
+  bio: Student  @IOE Purwanchal Campus #<br> Founder @------ <br> Open Source /#linux
+  picture: assets/images/profile.jpg 
+  github: dahalsharad # github username
+  twitter: d_sharad_ # twitter username
+  facebook: dahal.sharad # facebook username
+  instagram: sharad_dahal # instagram username
+  linkedin: sharaddahal # linkedin username
+  email: dahalsharad57@gmail.com # email adress
+
+
+# URL settings
+url: "https://blog.sharaddahal.com.np" # Domain Name of host. [username].github.io for github pages
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 20
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false
